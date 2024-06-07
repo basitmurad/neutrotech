@@ -5,12 +5,6 @@ class RegisterTab extends StatefulWidget {
   @override
   _RegisterTabState createState() => _RegisterTabState();
 }
-void navigateToSecondScreen(BuildContext context) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => DashboardScreen()),
-  );
-}
 
 class _RegisterTabState extends State<RegisterTab> {
   bool _isPasswordVisible = false;
@@ -112,7 +106,6 @@ class _RegisterTabState extends State<RegisterTab> {
 
             width: MediaQuery.of(context).size.width * 0.9,
               child: TextButton(onPressed: (){
-                Navigator.pop(context);
 
               }, child: Text("Login" ,textAlign: TextAlign.center, style: TextStyle(
                 color: Color(0XFF89BA2D),

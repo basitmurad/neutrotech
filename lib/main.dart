@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:neutrotech/screens/authentication/AuthenticationScreen.dart';
 import 'package:neutrotech/screens/authentication/TabBarViewWidget.dart';
 import 'package:neutrotech/screens/authentication/TabBarWidget.dart';
+import 'package:neutrotech/screens/dashboard/DashboardScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AuthenticationScreen(),
+      home: DashboardScreen(),
     );
   }
 }
