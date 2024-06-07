@@ -40,18 +40,18 @@ class _MyHomePageState extends State<AuthenticationScreen> with SingleTickerProv
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
-                  child: Text('Home' ,style: TextStyle(color: Colors.black),),
+                  child: Text('Home' ,style: TextStyle(color: Color(0XFF89BA2D)),),
                 ),
               ),
               Tab(
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
-                  child: Text('Profile' ,style: TextStyle(color: Colors.black),),
+                  child: Text('Profile' ,style: TextStyle(color: Color(0XFF89BA2D),),)
                 ),
               ),
             ],
-            indicatorColor: Colors.white,
+            indicatorColor: Color(0XFF89BA2D)
           ),
         ),
       ),
