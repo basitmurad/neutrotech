@@ -1,10 +1,11 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neutrotech/screens/authentication/LoginTab.dart';
 import 'package:neutrotech/screens/authentication/RegisterTab.dart';
 
 class AuthenticationScreen extends StatefulWidget {
+  const AuthenticationScreen({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -27,12 +28,12 @@ class _MyHomePageState extends State<AuthenticationScreen> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF13393F),
+      backgroundColor: const Color(0xFF13393F),
       appBar: AppBar(
-        backgroundColor: Color(0xFF13393F),
+        backgroundColor: const Color(0xFF13393F),
 
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(50.0),
+          preferredSize: const Size.fromHeight(50.0),
           child: TabBar(
             controller: _tabController,
             tabs: [
@@ -40,24 +41,24 @@ class _MyHomePageState extends State<AuthenticationScreen> with SingleTickerProv
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
-                  child: Text('Home' ,style: TextStyle(color: Color(0XFF89BA2D)),),
+                  child: const Text('Home' ,style: TextStyle(color: Color(0XFF89BA2D)),),
                 ),
               ),
               Tab(
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   alignment: Alignment.center,
-                  child: Text('Profile' ,style: TextStyle(color: Color(0XFF89BA2D),),)
+                  child: const Text('Profile' ,style: TextStyle(color: Color(0XFF89BA2D),),)
                 ),
               ),
             ],
-            indicatorColor: Color(0XFF89BA2D)
+            indicatorColor: const Color(0XFF89BA2D)
           ),
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           Center(child: RegisterTab()),
           Center(child: LoginTab()                                                                                                              ),
         ],

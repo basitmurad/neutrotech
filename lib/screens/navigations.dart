@@ -35,7 +35,7 @@ class NavigationCOntroller extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-     MealScreen(),
+     const MealScreen(),
     Container(
       color: Colors.orange,
     ),    Container(

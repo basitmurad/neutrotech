@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:neutrotech/screens/dashboard/DashboardScreen.dart';
 
 class RegisterTab extends StatefulWidget {
+  const RegisterTab({super.key});
+
   @override
   _RegisterTabState createState() => _RegisterTabState();
 }
@@ -22,9 +23,9 @@ class _RegisterTabState extends State<RegisterTab> {
             "E-mail address",
             style: TextStyle(color: Color(0XFF89BA2D)),
           ),
-          Card(
+          const Card(
             elevation: 4.0,
-            child: const Padding(
+            child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: TextField(
                 decoration: InputDecoration(
@@ -66,7 +67,7 @@ class _RegisterTabState extends State<RegisterTab> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -82,16 +83,16 @@ class _RegisterTabState extends State<RegisterTab> {
 
                 },
               ),
-              Text(
+              const Text(
                 'Remember me',
                 style: TextStyle(
                   color: Color(0XFF89BA2D),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 60,
               ),
-              Text(
+              const Text(
                 "Forget Password?",
                 textAlign: TextAlign.end,
                 style: TextStyle(
@@ -102,19 +103,19 @@ class _RegisterTabState extends State<RegisterTab> {
           ),
 
 
-          Container(
+          SizedBox(
 
             width: MediaQuery.of(context).size.width * 0.9,
               child: TextButton(onPressed: (){
 
-              }, child: Text("Login" ,textAlign: TextAlign.center, style: TextStyle(
+              }, child: const Text("Login" ,textAlign: TextAlign.center, style: TextStyle(
                 color: Color(0XFF89BA2D),
 
               ),) )) ,
 
 
 
-          Row(
+          const Row(
             children: [
               Expanded(
                 child: Divider(
@@ -123,7 +124,7 @@ class _RegisterTabState extends State<RegisterTab> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
                 child: Text(
                   "or",
                   style: TextStyle(

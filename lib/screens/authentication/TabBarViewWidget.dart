@@ -7,13 +7,15 @@ import 'TabControllerX.dart';
 
 
 class TabBarViewWidget extends StatelessWidget {
+  const TabBarViewWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<TabControllerX>(
       builder: (controller) {
         return TabBarView(
           controller: controller.tabController,
-          children: [
+          children: const [
             LoginTab(),
             RegisterTab(),
           ],

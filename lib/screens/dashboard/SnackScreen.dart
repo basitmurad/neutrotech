@@ -5,7 +5,7 @@ class SnackScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         'Home Screen',
         style: TextStyle(fontSize: 20),
