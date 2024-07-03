@@ -13,133 +13,156 @@ class _RegisterTabState extends State<RegisterTab> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            "E-mail address",
-            style: TextStyle(color: Color(0XFF89BA2D)),
-          ),
-          const Card(
-            elevation: 4.0,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                ),
-              ),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "E-mail address",
+              style: TextStyle(color: Color(0XFF89BA2D)),
             ),
-          ),
-          const SizedBox(height: 16),
-          const Text(
-            "Enter password",
-            textAlign: TextAlign.start,
-            style: TextStyle(
-              color: Color(0XFF89BA2D),
-            ),
-          ),
-          Card(
-            elevation: 4.0,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: TextField(
-                obscureText: !_isPasswordVisible,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      _isPasswordVisible
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: Colors.grey,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        _isPasswordVisible = !_isPasswordVisible;
-                      });
-                    },
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              Checkbox(
-                checkColor: Colors.yellow,
-                value: _isPasswordVisible,
-                onChanged: (bool? value) {
-
-                  setState(() {
-                    _rememberMe = value ?? false;
-                  });
-
-                },
-              ),
-              const Text(
-                'Remember me',
-                style: TextStyle(
-                  color: Color(0XFF89BA2D),
-                ),
-              ),
-              const SizedBox(
-                width: 60,
-              ),
-              const Text(
-                "Forget Password?",
-                textAlign: TextAlign.end,
-                style: TextStyle(
-                  color: Color(0XFF89BA2D),
-                ),
-              ),
-            ],
-          ),
-
-
-          SizedBox(
-
-            width: MediaQuery.of(context).size.width * 0.9,
-              child: TextButton(onPressed: (){
-
-              }, child: const Text("Login" ,textAlign: TextAlign.center, style: TextStyle(
-                color: Color(0XFF89BA2D),
-
-              ),) )) ,
-
-
-
-          const Row(
-            children: [
-              Expanded(
-                child: Divider(
-                  color: Colors.grey,
-                  thickness: 1,
-                ),
-              ),
-              Padding(
+            const Card(
+              elevation: 4.0,
+              child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text(
-                  "or",
-                  style: TextStyle(
-                    color: Colors.grey,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
                   ),
                 ),
               ),
-              Expanded(
-                child: Divider(
-                  color: Colors.grey,
-                  thickness: 1,
+            ),
+            const SizedBox(height: 16),
+      
+      
+            const Text(
+              "Enter Name",
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: Color(0XFF89BA2D),
+              ),
+            ),
+            Card(
+              elevation: 4.0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: TextField(
+                  obscureText: !_isPasswordVisible,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.grey,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible;
+                        });
+                      },
+                    ),
+                  ),
                 ),
               ),
-            ],
-          ),        ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+      
+      
+            const Text(
+              "Enter password",
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: Color(0XFF89BA2D),
+              ),
+            ),
+            Card(
+              elevation: 4.0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: TextField(
+                  obscureText: !_isPasswordVisible,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.grey,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+      
+            const Text(
+              "Enter Number",
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: Color(0XFF89BA2D),
+              ),
+            ),
+            Card(
+              elevation: 4.0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: TextField(
+                  obscureText: !_isPasswordVisible,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.grey,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _isPasswordVisible = !_isPasswordVisible;
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+      
+            SizedBox(
+      
+              width: MediaQuery.of(context).size.width * 0.9,
+                child: TextButton(onPressed: (){
+      
+                }, child: const Text("Sign Up" ,textAlign: TextAlign.center, style: TextStyle(
+                  color: Color(0XFF89BA2D),
+      
+                ),) )) ,
+      
+      
+      
+      
+      
+          ],
+        ),
       ),
     );
   }

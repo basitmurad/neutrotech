@@ -1,59 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:neutrotech/screens/dashboard/widgets/ItemDesign.dart';
 
 class MealScreen extends StatelessWidget {
   const MealScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> items = [
+      {'title': 'Karahi', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/img.png")},
+      {'title': 'Chicken pasta', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image1.png")},
+      {'title': 'Mixed Salad', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image2.png")},
+      {'title': 'Mixed Salad', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image3.png")},
+      {'title': 'chowinen', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image4.png")},
+      {'title': 'white karahi', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image5.png")},
+      {'title': 'Karahi', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/img.png")},
+      {'title': 'Chicken pasta', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image1.png")},
+      {'title': 'Mixed Salad', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image2.png")},
+      {'title': 'Mixed Salad', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image3.png")},
+      {'title': 'chowinen', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image4.png")},
+      {'title': 'white karahi', 'subtitle': 'Rs. 100', 'icon': AssetImage("assets/image5.png")},
+    ];
     return Scaffold(
       backgroundColor: const Color(0xFF13393F),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
         child: Column(
           children: [
-
-ItemDesign()
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Number of columns
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  final item = items[index];
+                  return ItemDesign(
+                    title: item['title'],
+                    subtitle: item['subtitle'],
+                    imagePath: item['icon'],
+                  );
+                },
+              ),
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ItemDesign extends StatelessWidget {
-  const ItemDesign({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.all(color: Color(0xFF173033)),
-          borderRadius: BorderRadius.circular(10)),
-      child: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage(
-              "assets/logo.png",
-            ),
-            width: 69,
-            height: 69,
-          ),
-          Text(
-            "White karahi ",
-            style: TextStyle(color: Color(0xFF89BA2D), fontSize: 16),
-          ),
-          Text(
-            "100 ",
-            style: TextStyle(
-                color: Color(0xFF89BA2D),
-                fontSize: 16,
-                fontWeight: FontWeight.w700),
-          ),
-        ],
       ),
     );
   }

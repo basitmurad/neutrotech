@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:neutrotech/screens/authentication/AuthenticationScreen.dart';
+import 'package:neutrotech/screens/dashboard/DashboardScreen.dart';
 
 void main() {
   runApp(const MyApp());
